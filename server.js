@@ -4,7 +4,7 @@ const express = require('express')
 const ejs = require('ejs')
 const bodyParser = require('body-parser')
 const fs = require('fs')
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 var app = express()
 
 /** bodyParser.urlencoded(options)
@@ -41,5 +41,5 @@ app.get('/view', (req, res) => {
   res.render('view', {'data': data})
 })
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 console.log('3000 is the magic port');
