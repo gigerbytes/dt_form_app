@@ -4,6 +4,7 @@ const express = require('express')
 const ejs = require('ejs')
 const bodyParser = require('body-parser')
 const fs = require('fs')
+const port = process.env.PORT || 3000;
 var app = express()
 
 /** bodyParser.urlencoded(options)
