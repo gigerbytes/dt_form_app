@@ -14,11 +14,14 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+app.use(express.static(__dirname + '/public'));
+
+
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.send('hello world')
+  res.render('index')
 })
 
 app.get('/form', (req, res) => {
@@ -28,13 +31,13 @@ app.get('/form', (req, res) => {
 app.post('/submit', (req, res) => {
   console.log(req.body.name)
   fs.appendFileSync('data/names.txt', req.body.name+'\n')
-  res.send('successfuly saved your data')
+  res.render('submit')
 })
 
 app.get('/view', (req, res) => {
   let data  = fs.readFileSync('data/names.txt', 'utf8')
   console.log(data)
-  res.send(data)
+  res.render('view', {'data': data})
 })
 
 app.listen(3000);

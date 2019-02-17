@@ -1,0 +1,16 @@
+@import 'components/footer.css';
+@import 'components/navbar.css';
+/* @import 'components/buttons.css'*/
+
+body {
+  background-color: white;
+}
+
+
+.form {
+  padding-left: 15px;
+  border-radius: 20px;
+  height: 40px;
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+}
