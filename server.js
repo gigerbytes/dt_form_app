@@ -1,10 +1,11 @@
 // server.js
 // load the things we need
-var express = require('express')
-var ejs = require('ejs')
-var bodyParser = require('body-parser')
-fs = require('fs')
+const express = require('express')
+const ejs = require('ejs')
+const bodyParser = require('body-parser')
+const fs = require('fs')
 var app = express()
+
 /** bodyParser.urlencoded(options)
  * Parses the text as URL encoded data (which is how browsers tend to send form data from regular forms set to POST)
  * and exposes the resulting object (containing the keys and values) on req.body
